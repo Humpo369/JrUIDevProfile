@@ -1,0 +1,132 @@
+body {
+	max-width: 420px;
+	height: auto;
+	box-shadow: 10px 10px 20px grey;
+	border-radius: 10px;
+	background-color: #EEEEEE;
+}
+
+/*Wording Styling*/
+
+.Card {
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	background-image: url('U:/Webcoding/Junior-UI-Test/Exported Assets/image-space.jpg');
+	/* background-size: contain; - removed as responsive without contain. image removes completely at min 270px*/
+	background-repeat: no-repeat;
+	border-radius: 10px;
+	background-color: #FFFFFF;
+}
+
+.title {
+	margin-top: 0;
+	margin-bottom: 16px;
+	font-size: 16pt;
+	font-weight: bold;
+}
+
+.profile {
+	margin-top: 140px;
+	border: solid white 20px;
+	border-radius: 100px;
+	width: 35%;
+	height: auto;
+}
+
+.blurb {
+	color: #848484;
+	display: inline-table;
+	max-width: 75%;
+	margin-top: 0px;
+	font-size: 12pt;
+}
+
+/*Button Styling*/
+
+button {
+	height: 50px;
+	font-family: 'Open Sans', sans-serif;
+	border: 1px #3B90DD solid;
+	border-radius: 2px;
+	width: 75%;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.Accept {
+	background-color: #3B90DD;
+	color: #FFFFFF;
+	margin-bottom: 5px;
+}
+
+.Decline {
+	background-color: transparent;
+	color: #3B90DD;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+
+/* Accept Button Animation */
+
+.Accept span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.Accept span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.Accept:hover span {
+  padding-right: 25px;
+}
+
+.Accept:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Decline Button Animation */
+
+.Decline:hover {
+	animation: shake 0.5s; 
+	animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+	0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 270px) {
+  .Card {
+    background-image: none;
+  }
+
+  .profile {
+  	margin-top: 0;
+  	width: 128.89px;
+  }
+
+  .title {
+  	margin: 0 5px 16px 5px;
+  }
+}
